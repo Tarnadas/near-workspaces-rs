@@ -31,7 +31,7 @@ pub use types::{AccessKey, AccountId, BlockHeight, CryptoHash, InMemorySigner};
 pub use worker::{
     betanet, mainnet, mainnet_archival, sandbox, sandbox_with_version, testnet, testnet_archival,
     with_betanet, with_mainnet, with_mainnet_archival, with_sandbox, with_testnet,
-    with_testnet_archival, Worker,
+    with_testnet_archival, Worker, testnet_with_rpc,
 };
 
 #[cfg(feature = "unstable")]

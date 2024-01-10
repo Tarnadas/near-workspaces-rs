@@ -70,6 +70,12 @@ pub fn testnet_archival<'a>() -> NetworkBuilder<'a, Testnet> {
     NetworkBuilder::new("testnet-archival").rpc_addr(crate::network::testnet::ARCHIVAL_URL)
 }
 
+/// Connect to the [testnet](https://explorer.testnet.near.org/) network, and grab
+/// a [`Worker`] that can interact with it.
+pub fn testnet_with_rpc<'a>(rpc_url: &str, api_key: &str) -> NetworkBuilder<'a, Testnet> {
+    NetworkBuilder::new("testnet").rpc_addr(rpc_url).api_key(api_key)
+}
+
 /// Connect to the [mainnet](https://explorer.near.org/) network, and grab
 /// a [`Worker`] that can interact with it.
 pub fn mainnet<'a>() -> NetworkBuilder<'a, Mainnet> {
